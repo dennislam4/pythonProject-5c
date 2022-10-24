@@ -32,5 +32,4 @@ class SatData:
 
             outfile.write(",".join(['DBN', 'School Name', 'Number of Test Takers', 'Critical Reading Mean',
                                     'Mathematics Mean', 'Writing Mean']))
-            outfile.write(str(new_data))
-
+            outfile.write('\n')
