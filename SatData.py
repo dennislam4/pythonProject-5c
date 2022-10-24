@@ -23,11 +23,12 @@ class SatData:
             new_data.sort()
 
         with open("output.csv", "w") as outfile:
-            dbn_header = "DBN"
-            school_header = "School Name"
-            tt_header = "Number of Test Takers"
-            crit_header = "Critical Reading Mean"
-            math_header = "Mathematics Mean"
-            writing_header = "Writing Mean"
-            outfile.write(dbn_header + school_header + tt_header + crit_header + math_header + writing_header + '\n')
+            dbn = "DBN"
+            school = "School Name"
+            tt = "Number of Test Takers"
+            crit = "Critical Reading Mean"
+            math = "Mathematics Mean"
+            writing = "Writing Mean"
+            headers = (dbn + school + tt + crit + math + writing)
+            outfile.write(str(headers))
             outfile.write(str(new_data))
