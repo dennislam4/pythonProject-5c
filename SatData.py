@@ -31,4 +31,3 @@ class SatData:
             writing_header = "Writing Mean"
             outfile.write(dbn_header + school_header + tt_header + crit_header + math_header + writing_header + '\n')
             outfile.write(str(new_data))
-
