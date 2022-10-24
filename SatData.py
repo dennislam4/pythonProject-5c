@@ -16,15 +16,19 @@ class SatData:
     def save_as_csv(self, dbns):
         """Saves list of dbns as CSV file"""
         new_data = []
+
         for index in self._sat_data['data']:
             if index[8] in dbns:
                 new_data.append(index)
             new_data.sort()
-            print(new_data)
+
         with open("output.csv", "w") as outfile:
-            headers = "DBN, School Name, Number of Test Takers, Critical Reading Mean, Mathematics Mean, Writing Mean"
-            for column_headers in new_data:
-                outfile.write(str(column_headers) + headers + '\n')
-                for data in new_data:
-                    outfile.write(str(data) + '\n')
+            dbn_header = "DBN"
+            school_header = "School Name"
+            tt_header = "Number of Test Takers"
+            crit_header = "Critical Reading Mean"
+            math_header = "Mathematics Mean"
+            writing_header = "Writing Mean"
+            outfile.write(dbn_header + school_header + tt_header + crit_header + math_header + writing_header + '\n')
+            outfile.write(str(new_data))
 
