@@ -30,5 +30,6 @@ class SatData:
             math = "Mathematics Mean"
             writing = "Writing Mean"
             headers = (dbn + school + tt + crit + math + writing)
-            outfile.write(str(headers) + '\n')
+            column_headers = headers.split(",")
+            outfile.write(str(column_headers) + '\n')
             outfile.write(str(new_data))
