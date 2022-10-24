@@ -30,6 +30,7 @@ class SatData:
             # math = "Mathematics Mean"
             # writing = "Writing Mean"
 
-            outfile.write(",".join(['DBN', 'School Name', 'Number of Test Takers', 'Critical Reading Mean', 'Mathemeatic Mean', 'Writing Mean' ])
+            outfile.write(",".join(['DBN', 'School Name', 'Number of Test Takers', 'Critical Reading Mean',
+                                    'Mathematics Mean', 'Writing Mean']))
             outfile.write(str(new_data))
 
