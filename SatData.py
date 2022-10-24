@@ -29,7 +29,6 @@ class SatData:
             crit = "Critical Reading Mean"
             math = "Mathematics Mean"
             writing = "Writing Mean"
-            headers = (dbn + school + tt + crit + math + writing)
-            outfile.write(",".join(headers))
+            outfile.write(",".join(dbn + school + tt + crit + math + writing))
             outfile.write(str(new_data))
 
