@@ -23,10 +23,10 @@ class SatData:
             new_data.sort()
 
         with open("output.csv", "w") as outfile:
-            headers = ['DBN', 'School Name', 'Number of Test Takers', ' Critical Reading Mean', 'Mathematics Mean',
+            headers = ['DBN', 'School Name', 'Number of Test Takers', 'Critical Reading Mean', 'Mathematics Mean',
                        'Writing Mean']
             for index, header in enumerate(headers):
-                outfile.write(headers)
+                outfile.write(str(headers))
                 if index < len(headers) - 1:
                     outfile.write(',')
             outfile.write('\n')
