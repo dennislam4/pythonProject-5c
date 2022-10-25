@@ -14,7 +14,7 @@ class SatData:
             self._sat_data = json.load(infile)
 
     def save_as_csv(self, dbns):
-        """Saves list of dbns as CSV file"""
+        """Saves information starting at DBN's as CSV file"""
         new_data = []
 
         for index in self._sat_data['data']:
@@ -24,6 +24,7 @@ class SatData:
 
         with open("output.csv", "w") as outfile:
             headers = ['DBN', 'School Name', 'Number of Test Takers', 'Critical Reading Mean', 'Mathematics Mean', 'Writing Mean']
+
             for elements in headers:
                 elements.strip()
                 outfile.write(elements)
@@ -33,10 +34,7 @@ class SatData:
             data_list = []
 
             for data in new_data:
-                for entry in data:
-                    if "," not in str(entry):
-                        data_list.append('\n')
-                    if "," in str(entry):
-                        data.list.append(entry)
-                outfile.write(str(data_list))
-                outfile.write('\n')
+                if data == data[-1]:
+                    data_list.append(data)
+                    outfile.write(str(data_list))
+            outfile.write('\n')
