@@ -26,9 +26,9 @@ class SatData:
             headers = ['DBN', 'School Name', 'Number of Test Takers', 'Critical Reading Mean', 'Mathematics Mean',
                        'Writing Mean']
 
-            for element in headers:
-                if element == headers[-1]:
-                    outfile.write(',')
+            for elements in headers:
+                outfile.write(elements)
+                outfile.write(',')
             outfile.write('\n')
 
             data_list = []
