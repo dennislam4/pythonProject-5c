@@ -36,7 +36,7 @@ class SatData:
 
             for data in new_data:
                 for entry in data:
-                    if "," in entry:
+                    if "," in str(entry):
                         data_list.append(entry)
                 outfile.write(str(data_list))
                 outfile.write('\n')
