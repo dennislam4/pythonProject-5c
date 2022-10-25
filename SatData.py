@@ -26,9 +26,9 @@ class SatData:
             headers = ['DBN', 'School Name', 'Number of Test Takers', 'Critical Reading Mean', 'Mathematics Mean',
                        'Writing Mean']
 
-            for index, header in enumerate(headers):
+            for element in headers:
                 outfile.write(str(headers))
-                if index < len(headers) - 1:
+                if element < len(headers) - 1:
                     outfile.write(',')
             outfile.write('\n')
 
