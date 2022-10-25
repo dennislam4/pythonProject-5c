@@ -25,8 +25,18 @@ class SatData:
         with open("output.csv", "w") as outfile:
             headers = ['DBN', 'School Name', 'Number of Test Takers', 'Critical Reading Mean', 'Mathematics Mean',
                        'Writing Mean']
+
             for index, header in enumerate(headers):
                 outfile.write(str(headers))
                 if index < len(headers) - 1:
                     outfile.write(',')
             outfile.write('\n')
+
+            data_list = []
+
+            for data in new_data:
+                for entry in data:
+                    if "," in entry:
+                        data_list.append(entry)
+                outfile.write(str(data_list))
+                outfile.write('\n')
