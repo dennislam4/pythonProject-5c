@@ -27,6 +27,7 @@ class SatData:
                        'Writing Mean']
 
             for elements in headers:
+                elements.strip()
                 outfile.write(elements)
                 outfile.write(',')
             outfile.write('\n')
