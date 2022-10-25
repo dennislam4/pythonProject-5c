@@ -37,4 +37,4 @@ class SatData:
                 if data == data[-1]:
                     data_list.append(data)
                     outfile.write(str(data_list))
-            outfile.write('\n')
+                outfile.write('\n')
