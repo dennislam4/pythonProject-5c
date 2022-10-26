@@ -23,7 +23,8 @@ class SatData:
             new_data.sort()
 
         with open("output.csv", "w") as outfile:
-            headers = ['DBN', 'School Name', 'Number of Test Takers', 'Critical Reading Mean', 'Mathematics Mean', 'Writing Mean']
+            headers = ['DBN', 'School Name', 'Number of Test Takers', 'Critical Reading Mean', 'Mathematics Mean',
+                       'Writing Mean']
 
             for elements in headers:
                 elements.strip()
@@ -31,10 +32,12 @@ class SatData:
                 outfile.write(',')
             outfile.write('\n')
 
-            data_list = []
-
+            output = []
             for data in new_data:
-                if data == data[-1]:
-                    data_list.append(data)
-                    outfile.write(str(data_list))
-                outfile.write('\n')
+                for i in range(8, 14):
+                    if "," in data:
+                        output.append(" " + data + " ")
+                    else:
+                        output.append(data)
+                outfile.write(data)
+            outfile.write('\n')
