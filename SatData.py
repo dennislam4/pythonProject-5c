@@ -35,7 +35,7 @@ class SatData:
             output = []
             for data in new_data:
                 for i in range(8, 14):
-                    if "," in data:
+                    if "," in data[i]:
                         output.append(" " + data + " ")
                     else:
                         output.append(data)
