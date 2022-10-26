@@ -39,5 +39,5 @@ class SatData:
                         output.append(" " + data + " ")
                     else:
                         output.append(data)
-                outfile.write(data)
+                outfile.write(str(data))
             outfile.write('\n')
