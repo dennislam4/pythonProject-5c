@@ -30,7 +30,7 @@ class SatData:
                 elements.strip()
                 if elements == headers[-1]:
                     outfile.write(elements)
-                    outfile.write(",".join(elements))
+                    outfile.write(elements.rstrip(','))
                 else:
                     outfile.write(elements)
                     outfile.write(',')
