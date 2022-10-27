@@ -28,7 +28,7 @@ class SatData:
 
             for elements in headers:
                 elements.strip()
-                if elements[13] in headers:
+                if elements == elements[13]:
                     outfile.write(elements)
                     outfile.write(elements.replace(",", ""))
                 else:
