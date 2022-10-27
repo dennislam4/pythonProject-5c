@@ -26,13 +26,14 @@ class SatData:
             headers = ['DBN', 'School Name', 'Number of Test Takers', 'Critical Reading Mean', 'Mathematics Mean',
                        'Writing Mean']
 
-            for elements in headers:
-                elements.strip()
-                if elements == headers[-1]:
-                    outfile.write(elements)
-                    outfile.write(elements.rstrip(','))
+            for element in headers:
+                element.strip()
+                if element == range(-1):
+
+                    outfile.write(element)
+                    outfile.write(element.rstrip(','))
                 else:
-                 #   outfile.write(elements)
+                    outfile.write(element)
                     outfile.write(',')
             outfile.write('\n')
 
