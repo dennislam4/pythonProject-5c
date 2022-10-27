@@ -28,8 +28,7 @@ class SatData:
 
             for element in headers:
                 element.strip()
-                if element == range(-1):
-
+                if element in range(-1):
                     outfile.write(element)
                     outfile.write(element.rstrip(','))
                 else:
