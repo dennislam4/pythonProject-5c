@@ -32,7 +32,7 @@ class SatData:
                     outfile.write(elements)
                     outfile.write(elements.rstrip(','))
                 else:
-                    outfile.write(elements)
+                 #   outfile.write(elements)
                     outfile.write(',')
             outfile.write('\n')
 
